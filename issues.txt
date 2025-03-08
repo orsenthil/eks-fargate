@@ -4,3 +4,21 @@ Waiting for CoreDNS Fargate profile to become active...
 
 An error occurred (ResourceNotFoundException) when calling the DescribeFargateProfile operation: No Fargate Profile found with name: coredns-profile.
 Current CoreDNS profile status: 
+
+[senthilx@88665a371033:~/git/eks-fargate]$ kubectl get clusterroles -A |grep prox
+system:node-
+proxier                                                    2025-03-08T01:38:14Z
+[senthilx@88665a371033:~/git/eks-fargate]$ kubectl get clusterroles -A |grep dns
+eks:coredns-autoscaler                                                 2025-03-08T01:38:17Z
+system:coredns                                                         2025-03-08T01:39:09Z
+system:kube-dns                                                        2025-03-08T01:38:14Z
+[senthilx@88665a371033:~/git/eks-fargate]$ kubectl get clusterrolebinding -A |grep prox
+eks:kube-proxy                                           ClusterRole/system:node-proxier                                      52m
+eks:kube-proxy-fargate                                   ClusterRole/system:node-proxier                                      53m
+eks:kube-proxy-windows                                   ClusterRole/system:node-proxier                                      53m
+system:node-proxier                                      ClusterRole/system:node-proxier                                      53m
+[senthilx@88665a371033:~/git/eks-fargate]$ kubectl get clusterrolebinding -A |grep dns
+eks:coredns-autoscaler                                   ClusterRole/eks:coredns-autoscaler                                   53m
+system:coredns                                           ClusterRole/system:coredns                                           52m
+system:kube-dns                                          ClusterRole/system:kube-dns                                          53m
+
