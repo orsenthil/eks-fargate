@@ -8,8 +8,8 @@ export AZ_2=us-east-1b
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 
 # Resource naming
-export EKS_CLUSTER_NAME=my-eks-fargate-cluster1
-export EKS_CLUSTER_ROLE=eks-cluster1-role
-export EKS_FARGATE_POD_EXECUTION_ROLE=eks-fargate-pod-execution-role1
+export EKS_CLUSTER_NAME=my-eks-fargate-cluster2
+export EKS_CLUSTER_ROLE=eks-cluster2-role
+export EKS_FARGATE_POD_EXECUTION_ROLE=eks-fargate-pod-execution-role2
 export EKS_FARGATE_COREDNS_PROFILE=coredns-profile
 export EKS_FARGATE_DEFAULT_PROFILE=default-profile
