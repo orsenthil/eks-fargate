@@ -1,10 +1,10 @@
 # Set these values according to your requirements
-export AWS_REGION=us-east-1
+export AWS_REGION=us-west-2
 export VPC_CIDR=10.0.0.0/16
 export SUBNET_1_CIDR=10.0.1.0/24
 export SUBNET_2_CIDR=10.0.2.0/24
-export AZ_1=us-east-1a
-export AZ_2=us-east-1b
+export AZ_1=us-west-2a
+export AZ_2=us-west-2b
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 
 # Resource naming
